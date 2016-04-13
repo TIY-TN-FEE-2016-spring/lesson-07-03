@@ -1,10 +1,19 @@
 {{!-- branches/template.hbs --}}
 <h2>All branches</h2>
 
-<p>
-  {{#link-to "branches.new"}}
-    {{fa-icon "plus"}}
-  {{/link-to}}
-</p>
+<ul>
+  {{#each model as |blobbity|}}
+    <li>
+      {{blobbity.name}} -
+      {{blobbity.location}}
+    </li>
+  {{/each}}
+
+  <li>
+    {{#link-to "branches.new"}}
+      {{fa-icon "plus"}}
+    {{/link-to}}
+  </li>
+</ul>
 
 {{outlet}}
