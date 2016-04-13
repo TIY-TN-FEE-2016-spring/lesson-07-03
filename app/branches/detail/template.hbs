@@ -1,5 +1,8 @@
 <h2>{{model.name}} - {{model.location}}</h2>
 
+{{ember-chart type="line"
+  data=(chart-format (price-by-date (group-by "saleDate" (sort-by "saleDate" model.sales))))}}
+
 <table>
   <thead>
     <tr>

@@ -1,6 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  chartOptions: {
+    responsive: true
+  },
   newSale: {
     saleDate: null,
     price: ``,
