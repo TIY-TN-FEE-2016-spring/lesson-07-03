@@ -6,5 +6,5 @@ export default Model.extend({
   name: attr(),
   location: attr(),
 
-  sales: hasMany(`sale`),
+  // sales: hasMany(`sale`),
 });
