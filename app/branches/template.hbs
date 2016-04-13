@@ -3,8 +3,10 @@
     <ul class="sidebar">
       {{#each model as |blobbity|}}
         <li class="sidebar__item">
-          {{blobbity.name}} -
-          {{blobbity.location}}
+          {{#link-to "branches.detail" blobbity.id}}
+            {{blobbity.name}} -
+            {{blobbity.location}}
+          {{/link-to}}
         </li>
       {{/each}}
 

@@ -10,6 +10,10 @@ Router.map(function() {
     path: '/'
   }, function() {
     this.route('new');
+
+    this.route('detail', {
+      path: '/:branch_id'
+    });
   });
 });
 
