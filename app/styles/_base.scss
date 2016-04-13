@@ -18,7 +18,32 @@ ul {
 
   min-height: 100vh;
 
-  &__container {
+  &__content {
+    display: flex;
     flex-grow: 1;
   }
+}
+
+.sidebar {
+  width: 10%;
+  min-width: 10rem;
+  max-width: 20rem;
+
+  &__item {
+    text-align: center;
+
+    a {
+      display: block;
+      padding: $gutter / 2;
+
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+}
+
+.child-detail {
+  flex-grow: 1;
+
+  margin: $gutter;
 }

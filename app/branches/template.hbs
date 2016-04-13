@@ -1,24 +1,20 @@
-<div class="yg-row">
-  <div class="yg-col-3">
-    <ul class="sidebar">
-      {{#each model as |blobbity|}}
-        <li class="sidebar__item">
-          {{#link-to "branches.detail" blobbity.id}}
-            {{blobbity.name}} -
-            {{blobbity.location}}
-          {{/link-to}}
-        </li>
-      {{/each}}
+<ul class="sidebar">
+  {{#each model as |blobbity|}}
+    <li class="sidebar__item">
+      {{#link-to "branches.detail" blobbity.id}}
+        {{blobbity.name}} -
+        {{blobbity.location}}
+      {{/link-to}}
+    </li>
+  {{/each}}
 
-      <li class="sidebar__item">
-        {{#link-to "branches.new"}}
-          {{fa-icon "plus"}}
-        {{/link-to}}
-      </li>
-    </ul>
-  </div>
+  <li class="sidebar__item">
+    {{#link-to "branches.new"}}
+      {{fa-icon "plus"}}
+    {{/link-to}}
+  </li>
+</ul>
 
-  <div class="yg-col-9">
-    {{outlet}}
-  </div>
+<div class="child-detail">
+  {{outlet}}
 </div>

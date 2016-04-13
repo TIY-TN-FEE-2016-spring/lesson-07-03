@@ -1,0 +1,32 @@
+.form {
+  max-width: 40rem;
+
+  &__title {
+    margin: 0;
+  }
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: $gutter / 2;
+
+  &__label {
+    font-size: 0.8rem;
+  }
+
+  &__input {
+    border: 0;
+    border-bottom: $brand-primary solid 0.1rem;
+
+    font-size: 1rem;
+  }
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+
+  margin-top: $gutter / 2;
+}

@@ -1,6 +1,18 @@
-<form {{action saveForm model on="submit"}}>
+<form {{action saveForm model on="submit"}} class="form">
+  <h2 class="form__title">New Store Branch</h2>
 
-  {{input value=model.name placeholder="Name"}}
-  {{input value=model.location placeholder="Location"}}
-  <button>SAVE</button>
+  <div class="form-field">
+    <label class="form-field__label">Name</label>
+    {{input class="form-field__input" value=model.name placeholder="Name"}}
+  </div>
+
+
+  <div class="form-field">
+    <label class="form-field__label">Location</label>
+    {{input class="form-field__input" value=model.location placeholder="Location"}}
+  </div>
+
+  <div class="form-actions">
+    <button class="btn">SAVE</button>
+  </div>
 </form>
