@@ -6,6 +6,11 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('branches', {
+    path: '/'
+  }, function() {
+    this.route('new');
+  });
 });
 
 export default Router;
