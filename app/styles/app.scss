@@ -1,5 +1,30 @@
-@import "yoga";
+@import 'yoga';
 
 // Uncomment this for working with yoga prototyping
 // http://rtablada.github.io/yoga-sass/#mixin-yoga-prototype
-// @include yoga-prototype();
+@include yoga-prototype;
+
+$brand-primary: #263248;
+$brand-secondary: #ff9800;
+$brand-white: #fff;
+$brand-blue: #7e8aa2;
+$brand-black: #000;
+
+@import 'base';
+@import 'top-nav';
+
+.yg-row {
+  display: flex;
+  margin: 0 (-$gutter);
+}
+
+.sidebar {
+  margin: 0;
+  background: $brand-blue;
+
+  &__item {
+    & + * {
+      border-top: $brand-primary solid 0.1rem;
+    }
+  }
+}

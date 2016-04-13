@@ -1,3 +1,13 @@
-<h2 id="title">Welcome to Ember</h2>
+<div class="app">
+  <nav class="top-nav">
+    <div class="yg-container">
+      <ul class="nav-list">
+        <li class="nav-list__brand">
+          {{link-to "Stores" "branches.index"}}
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-{{outlet}}
+  <div class="app__content">{{outlet}}</div>
+</div>

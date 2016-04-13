@@ -1,0 +1,11 @@
+.top-nav {
+  background: $brand-primary;
+  color: $brand-secondary;
+}
+
+.nav-list {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
