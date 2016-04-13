@@ -16,7 +16,7 @@ ul {
   display: flex;
   flex-direction: column;
 
-  min-height: 100vh;
+  height: 100vh;
 
   &__content {
     display: flex;
@@ -28,6 +28,7 @@ ul {
   width: 10%;
   min-width: 10rem;
   max-width: 20rem;
+  overflow-y: auto;
 
   &__item {
     text-align: center;
@@ -45,5 +46,7 @@ ul {
 .child-detail {
   flex-grow: 1;
 
-  margin: $gutter;
+  padding: $gutter;
+
+  overflow-y: scroll;
 }

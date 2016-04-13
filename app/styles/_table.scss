@@ -1,0 +1,33 @@
+$table-border: rgba($brand-primary, 0.8) solid 0.1rem;
+$stripe-color: rgba($brand-blue, 0.4);
+
+.table-stripe {
+  width: 100%;
+  border-spacing: 0;
+
+  td,
+  th {
+    padding: $gutter / 4;
+  }
+
+  th + th,
+  td + td {
+    border-left: $table-border;
+  }
+
+  &__header {
+    background: $brand-blue;
+  }
+
+  &__row {
+    &:nth-of-type(odd) {
+      background: $stripe-color;
+    }
+  }
+
+  &__row + &__row {
+    & td {
+      border-top: $table-border;
+    }
+  }
+}

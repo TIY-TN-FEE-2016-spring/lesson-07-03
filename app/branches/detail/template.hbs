@@ -3,9 +3,9 @@
 {{ember-chart type="line"
   data=(chart-format (price-by-date (group-by "saleDate" (sort-by "saleDate" model.sales))))}}
 
-<table>
+<table class="table-stripe">
   <thead>
-    <tr>
+    <tr class="table-stripe__header">
       <th>PO Number</th>
       <th>Sale Date</th>
       <th>Sale Price</th>
@@ -13,7 +13,7 @@
   </thead>
   <tbody>
     {{#each model.sales as |record|}}
-      <tr>
+      <tr class="table-stripe__row">
         <td>{{record.id}}</td>
         <td>{{record.saleDate}}</td>
         <td>{{record.price}}</td>
@@ -22,11 +22,19 @@
   </tbody>
 </table>
 
-<form {{action saveSale model newSale on="submit"}}>
-  <h3>Record New Sale</h3>
+<form {{action saveSale model newSale on="submit"}} class="form">
+  <h3 class="form__title">Record New Sale</h3>
 
-  {{input value=newSale.saleDate type="date" placeholder="Sale Date"}}
-  {{input value=newSale.price type="number" placeholder="Sale Price"}}
+  <div class="form-field">
+    <label class="form-field__label">Sale Date</label>
+    {{input class="form-field__input" value=newSale.saleDate type="date" placeholder="Sale Date"}}
+  </div>
+  <div class="form-field">
+    <label class="form-field__label">Sale Price</label>
+    {{input class="form-field__input" value=newSale.price type="number" placeholder="Sale Price"}}
+  </div>
 
-  <button>Submit</button>
+  <div class="form-actions">
+    <button class="btn">Submit</button>
+  </div>
 </form>
