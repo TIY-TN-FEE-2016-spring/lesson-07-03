@@ -1,5 +1,7 @@
 <h2>{{model.name}} - {{model.location}}</h2>
 
+{{ember-chart type="line" data=(chart-price (group-by "saleDate" (sort-by "saleDate" model.sales))) width=300 height=300}}
+
 <table>
   <thead>
     <tr>
@@ -9,7 +11,7 @@
     </tr>
   </thead>
   <tbody>
-    {{#each model.sales as |record|}}
+    {{#each (sort-by "saleDate" model.sales) as |record|}}
       <tr>
         <td>{{record.id}}</td>
         <td>{{record.saleDate}}</td>
