@@ -18,3 +18,12 @@
     {{/each}}
   </tbody>
 </table>
+
+<form {{action saveSale model newSale on="submit"}}>
+  <h3>Record New Sale</h3>
+
+  {{input value=newSale.saleDate type="date" placeholder="Sale Date"}}
+  {{input value=newSale.price type="number" placeholder="Sale Price"}}
+
+  <button>Submit</button>
+</form>
